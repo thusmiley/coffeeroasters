@@ -29,7 +29,7 @@ const Header = () => {
           {/* mobile */}
           <div className="md:hidden">
             {/* overlay */}
-            <div className={`${!toggle ? "hidden" : "fixed"} top-[83px] bottom-0 left-0 right-0 bg-overlay`} />
+            <div className={`${!toggle ? "hidden" : "fixed"} top-[80px] bottom-0 left-0 right-0 bg-overlay`} />
 
             {/* open/close buttons */}
             <img src={toggle ? close : open} alt="menu" onClick={() => setToggle(!toggle)} className="cursor-pointer z-10" />

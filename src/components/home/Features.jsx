@@ -5,7 +5,7 @@ import truck from "../../assets/home/desktop/icon-truck.svg";
 
 const Features = () => {
   return (
-    <section className="h-[1600px] md:h-[1000px] xl:h-[900px]">
+    <section className="h-[1550px] md:h-[1000px] xl:h-[900px]">
       <div className="bg-dark-gray w-container px-cx mx-auto rounded-[10px] h-[902px] text-cream text-center flex flex-col py-[64px] px-[24px] md:h-[573px] md:p-[56px] xl:pt-[100px] xl:px-[70px]">
         <h2 className="font-fraunces text-[28px] leading-[28px] md:text-[32px] md:leading-[48px] xl:text-[40px]">Why choose us?</h2>
         <p className="paragraph mt-6 mb-[64px] md:mb-[70px] md:max-w-[540px] md:mx-auto xl:mt-8 xl:mb-[86px]">
