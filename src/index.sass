@@ -1,0 +1,133 @@
+@tailwind base
+@tailwind components
+@tailwind utilities
+
+@layer base 
+    :root
+        --container-w: 95%
+    @screen sm 
+        :root
+            --container-w: clamp(540px, 90%, 1280px)
+    @screen 2xl
+        :root
+            --container-w: clamp(900px, 85%, 1110px)
+
+    *
+        box-sizing: border-box
+        margin: 0
+        padding: 0
+    
+    body
+        font-synthesis: none
+        text-rendering: optimizeLegibility
+        scroll-behavior: smooth
+        font-family: 'Barlow', sans-serif
+        @apply text-dark-gray bg-cream
+        position: relative
+
+    img
+        display: block
+        max-width: 100%
+
+    a 
+        text-decoration: none
+        transition: 0.3s ease-in-out
+
+// headings and paragraphs
+.heading1, .heading2, .heading3, .cta
+    font-family: 'Fraunces', serif
+    font-weight: 900
+
+.heading1
+    font-size: 40px
+    line-height: 40px
+
+.heading2
+    font-size: 40px
+    line-height: 72px
+
+.heading3
+    font-size: 24px
+    line-height: 32px
+
+.paragraph
+    font-size: 15px
+    line-height: 25px
+
+.header-link, .footer-link
+    font-size: 12px
+    line-height: 15px
+    letter-spacing: 0.92px
+    font-family: 'Barlow', sans-serif
+    font-weight: bold
+
+.header-link:hover
+    @apply text-dark-gray
+
+.footer-link:hover
+    @apply text-cream
+
+@screen md
+    .heading1
+        font-size: 48px
+        line-height: 48px
+
+@screen xl
+    .heading1
+        font-size: 72px
+        line-height: 72px
+
+    .paragraph
+        font-size: 16px
+        line-height: 26px
+        
+/* general styles  */
+.flexCenter 
+    @apply flex justify-center items-center
+
+.flexBetween 
+    @apply flex justify-between items-center
+
+.flexAround
+    @apply flex justify-around items-center
+
+.flexStart 
+    @apply flex justify-start items-center
+
+.flexEnd 
+    @apply flex justify-end items-center
+
+.cta
+    font-size: 18px
+    line-height: 25px
+    padding: 15px 31px
+    @apply bg-cyan text-cream
+    border-radius: 6px
+    
+.cta:hover
+    background-color: #66D2CF    
+
+// home hero bg 
+.home-hero-bg
+    background: url('/src/assets/home/mobile/image-hero-coffeepress.jpg') no-repeat top center    
+    background-size: cover
+    @screen md 
+        background: url('/src/assets/home/tablet/image-hero-coffeepress.jpg') no-repeat top center    
+        background-size: cover
+
+.bg-overlay
+    background: linear-gradient(180deg, #FEFCF7 45%, rgba(254, 252, 247, 0.50) 100%)
+
+.sidebar 
+    animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both
+
+@keyframes slide-top 
+    0% 
+        -webkit-transform: translateY(100px)
+        transform: translateY(100px)
+    100% 
+        -webkit-transform: translateY(0)
+        transform: translateY(0)
+
+.social a:hover path
+    @apply fill-orange duration-300
