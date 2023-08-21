@@ -1,4 +1,8 @@
 import React from "react";
+import uk from "../../assets/about/desktop/illustration-uk.svg";
+import canada from "../../assets/about/desktop/illustration-canada.svg";
+import australia from "../../assets/about/desktop/illustration-australia.svg";
+
 
 const Locations = () => {
   return (
@@ -7,7 +11,7 @@ const Locations = () => {
 
       <div className="flexCenter flex-col md:flex-row md:mt-[72px] md:justify-between ">
         <div className="flexCenter flex-col mt-[72px] md:mt-0 md:inline">
-          <img src="/src/assets/about/desktop/illustration-uk.svg" alt="uk" />
+          <img src={uk} alt="uk" />
           <h3 className="text-[28px] leading-[36px] font-fraunces mt-12 mb-[22px] md:text-[24px] xl:text-[32px] xl:leading-[36px] xl:mt-[45px] xl:mb-6">United Kingdom</h3>
           <p className="text-[16px] leading-[26px]">
             68 Asfordby Rd <br />
@@ -18,7 +22,7 @@ const Locations = () => {
         </div>
 
         <div className="flexCenter flex-col mt-20 md:mt-0 md:mx-[10px] md:inline">
-          <img src="/src/assets/about/desktop/illustration-canada.svg" alt="canada" />
+          <img src={canada} alt="canada" />
           <h3 className="text-[28px] leading-[36px] font-fraunces mt-12 mb-[22px] md:text-[24px] xl:text-[32px] xl:leading-[36px] xl:mt-[45px] xl:mb-6">Canada</h3>
           <p className="text-[16px] leading-[26px]">
             1528 Eglinton Avenue <br />
@@ -29,7 +33,7 @@ const Locations = () => {
         </div>
 
         <div className="flexCenter flex-col mt-20 md:mt-0 md:inline">
-          <img src="/src/assets/about/desktop/illustration-australia.svg" alt="australia" />
+          <img src={australia} alt="australia" />
           <h3 className="text-[28px] leading-[36px] font-fraunces mt-12 mb-[22px] md:text-[24px] xl:text-[32px] xl:leading-[36px] xl:mt-[45px] xl:mb-6">Australia</h3>
           <p className="text-[16px] leading-[26px]">
             36 Swanston Street <br />

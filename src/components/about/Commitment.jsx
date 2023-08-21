@@ -1,18 +1,16 @@
 import React from "react";
 import commitmentmobile from "../../assets/about/mobile/image-commitment.jpg";
+import commitmenttablet from "../../assets/about/tablet/image-commitment.jpg";
+import commitmentdesktop from "../../assets/about/desktop/image-commitment.jpg";
 
 const Commitment = () => {
   return (
     <section className="w-container px-cx mx-auto mt-[120px] flexCenter flex-col text-center md:mt-[144px] md:flex-row md:text-left xl:mt-[168px] xl:px-[85px]">
       <picture>
-        <source media="(max-width: 480px)" srcset="/src/assets/about/mobile/image-commitment.jpg" />
-        <source media="(max-width: 1200px)" srcset="/src/assets/about/tablet/image-commitment.jpg" />
-        <source media="(min-width: 1201px)" srcset="/src/assets/about/desktop/image-commitment.jpg" />
-        <img
-          src="/src/assets/about/mobile/image-commitment.jpg"
-          alt="our commitment"
-          className="rounded-[10px] md:min-w-[281px] mb-12 md:mb-0 md:mr-[69px] md:w-[50%] xl:mr-[125px] xl:min-w-[445px]"
-        />
+        <source media="(max-width: 480px)" srcset={commitmentmobile} />
+        <source media="(max-width: 1200px)" srcset={commitmenttablet} />
+        <source media="(min-width: 1201px)" srcset={commitmentdesktop} />
+        <img src={commitmentmobile} alt="our commitment" className="rounded-[10px] md:min-w-[281px] mb-12 md:mb-0 md:mr-[69px] md:w-[50%] xl:mr-[125px] xl:min-w-[445px]" />
       </picture>
 
       <div className="md:w-[50%]">
