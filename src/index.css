@@ -12,7 +12,7 @@
   }
   @screen 2xl {
     :root {
-      --container-w: clamp(900px, 85%, 1110px);
+      --container-w: clamp(900px, 85%, 1280px);
     }
   }
   * {
@@ -156,4 +156,21 @@
 }
 .social a:hover path {
   @apply fill-orange duration-300;
+}
+
+.about-hero-bg {
+  background: url("/src/assets/about/mobile/image-hero-whitecup.jpg") no-repeat top center;
+  background-size: cover;
+}
+@screen sm {
+  .about-hero-bg {
+    background: url("/src/assets/about/tablet/image-hero-whitecup.jpg") no-repeat top center;
+    background-size: cover;
+  }
+}
+@screen lg {
+  .about-hero-bg {
+    background: url("/src/assets/about/desktop/image-hero-whitecup.jpg") no-repeat top center;
+    background-size: cover;
+  }
 }/*# sourceMappingURL=index.css.map */

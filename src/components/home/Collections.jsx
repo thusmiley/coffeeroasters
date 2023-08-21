@@ -6,7 +6,7 @@ import planalto from "../../assets/home/desktop/image-planalto.png";
 
 const Collections = () => {
   return (
-    <section className="w-container px-cx mx-auto flexCenter flex-col my-[120px] md:my-[144px] xl:mt-[136px] xl:mb-50">
+    <section className="w-container px-cx mx-auto flexCenter flex-col my-[120px] md:my-[144px] xl:mt-[136px] xl:mb-50 xl:px-[85px]">
       <h2 className="heading2 text-transparent bg-clip-text bg-gradient-to-b from-[#83888F] to-[#fefcf7] md:text-[96px] md:leading-[72px] xl:text-[150px]">our collection</h2>
 
       <div className="md:mt-[-70px] md:max-w-[573px] xl:flex xl:max-w-[100%] xl:mt-[-15px]">

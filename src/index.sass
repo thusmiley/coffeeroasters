@@ -10,7 +10,7 @@
             --container-w: clamp(540px, 90%, 1280px)
     @screen 2xl
         :root
-            --container-w: clamp(900px, 85%, 1110px)
+            --container-w: clamp(900px, 85%, 1280px)
 
     *
         box-sizing: border-box
@@ -131,3 +131,14 @@
 
 .social a:hover path
     @apply fill-orange duration-300
+
+// about hero bg 
+.about-hero-bg
+    background: url('/src/assets/about/mobile/image-hero-whitecup.jpg') no-repeat top center    
+    background-size: cover
+    @screen sm 
+        background: url('/src/assets/about/tablet/image-hero-whitecup.jpg') no-repeat top center    
+        background-size: cover
+    @screen lg 
+        background: url('/src/assets/about/desktop/image-hero-whitecup.jpg') no-repeat top center    
+        background-size: cover
