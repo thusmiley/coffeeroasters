@@ -7,8 +7,8 @@ import { useState, useEffect } from "react";
 const Header = () => {
   const [toggle, setToggle] = useState(false);
   return (
-    <header className="mx-auto w-container">
-      <div className="fixed top-0 py-8 flexBetween w-container bg-cream md:py-10">
+    <header className="fixed top-0 left-0 right-0 py-8 bg-cream md:py-10 z-20">
+      <div className="flexBetween w-container mx-auto">
         <a href="/">
           <img src={logo} alt="logo" className="w-[163px] md:w-[236px]" />
         </a>
