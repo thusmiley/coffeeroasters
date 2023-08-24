@@ -23,19 +23,19 @@ const Main = () => {
 
     switch (btnId) {
       case "btnpreference":
-        sideMenu[0].classList.toggle('sidemenu-active');
+        sideMenu[0].classList.toggle("sidemenu-active");
         break;
       case "btnbean":
-        sideMenu[1].classList.toggle('sidemenu-active');
+        sideMenu[1].classList.toggle("sidemenu-active");
         break;
       case "btnquantity":
-        sideMenu[2].classList.toggle('sidemenu-active');
+        sideMenu[2].classList.toggle("sidemenu-active");
         break;
       case "btngrind":
-        sideMenu[3].classList.toggle('sidemenu-active');
+        sideMenu[3].classList.toggle("sidemenu-active");
         break;
       case "btndelivery":
-        sideMenu[4].classList.toggle('sidemenu-active');
+        sideMenu[4].classList.toggle("sidemenu-active");
         break;
     }
   };
@@ -62,6 +62,8 @@ const Main = () => {
 
   useEffect(() => {
     const orderBtn = document.querySelector(".order-btn");
+    const totalCost = document.querySelectorAll(".totalCost");
+
     if (inputData.preference !== null && inputData.bean !== null && inputData.delivery !== null && inputData.grind !== null && inputData.quantity !== null) {
       orderBtn.classList.remove("disabled");
     } else {
@@ -69,7 +71,26 @@ const Main = () => {
     }
   }, [inputData]);
 
-  const handleSubmit = () => {};
+  // modal
+  const modal = document.getElementById("checkoutModal");
+  const modalOverlay = document.querySelector(".modal-overlay");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    modal.classList.remove("showModal");
+    modalOverlay.style.display = "block";
+
+    //calculate shipping cost
+    if (inputData.quantity === "250g" && inputData.delivery == "Every week") {
+      totalCost.innerText = 7.2 * 4 * 7;
+    }
+  };
+
+  const checkout = () => {
+    modal.classList.add("showModal");
+    modalOverlay.style.display = "none";
+  };
 
   return (
     <section className="w-container px-cx mx-auto xl:px-[85px] 2xl:flex ">
@@ -149,6 +170,38 @@ const Main = () => {
           </form>
         </div>
       </div>
+
+      {/* checkout modal */}
+      <div id="checkoutModal" className="showModal fixed z-40 top-0 left-0 bottom-0 right-0 mx-auto w-container flexCenter md:max-w-[540px]">
+        <div className="rounded-[12px] flexCenter flex-col bg-cream">
+          <div className="bg-dark-gray py-7 px-6 rounded-t-[10px] w-[100%] md:py-12 md:px-[56px]">
+            <h2 className="font-fraunces text-[28px] leading-[32px] text-cream md:text-[40px] md:leading-[48px]">Order Summary</h2>
+          </div>
+
+          <p className="summary-text text-gray px-6 mt-10 md:px-[56px] md:mt-[56px]">
+            “I drink my coffee as <span className="text-cyan">{chosenPreference}</span>, with a <span className="text-cyan">{chosenBean}</span> type of bean.{" "}
+            <span className="text-cyan">{chosenQuantity}</span>
+            &nbsp; ground ala <span className="text-cyan">{chosenGrind}</span>, sent to me <span className="text-cyan">{chosenDelivery}</span>.”
+          </p>
+          <p className="px-6 mb-6 paragraph md:px-[56px] md:mt-[7px] md:mb-[47px]">
+            Is this correct? You can proceed to checkout or go back to plan selection if something is off. Subscription discount codes can also be redeemed at the checkout.{" "}
+          </p>
+          <button type="button" className="mb-6 cta w-[85%] md:hidden" onClick={checkout}>
+            Checkout - $<span className="totalCost"></span> / mo
+          </button>
+          <div className="hidden md:flex flex-row pb-[56px] justify-between items-center w-[100%] px-[56px]">
+            <p className="font-fraunces text-[32px] leading-[36px]">
+              $<span className="totalCost"></span> / mo
+            </p>
+            <button type="button" className="cta w-[50%]" onClick={checkout}>
+              Checkout
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* modal overlay */}
+      <div className="modal-overlay" onClick={checkout}/>
     </section>
   );
 };
