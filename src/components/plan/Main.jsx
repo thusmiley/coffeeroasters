@@ -143,11 +143,11 @@ const Main = () => {
         <div className="accordion ">
           {/* render questions */}
           {planData.map((plan) => (
-            <div key={plan.id} className="accordion__item md:w-[100%]">
+            <div key={plan.id} className="md:w-[100%]">
               <h2 className="mb-6 cursor-pointer flexBetween relative header-text md:mb-10 xl:mb-[56px]">
                 <button
                   id={`btn${plan.id}`}
-                  className="accordion-btn heading4 transition-all duration-300 ease-in-out w-[100%] text-left relative md:text-[32px] md:leading-[48px] xl:text-[40px]"
+                  className="accordion-btn heading4 w-[100%] text-left relative pr-2 md:text-[32px] md:leading-[48px] xl:text-[40px]"
                   type="button"
                   data-toggle="collapse"
                   data-target={`collapse${plan.id}`}
