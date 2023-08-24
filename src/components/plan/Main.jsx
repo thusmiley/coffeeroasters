@@ -62,7 +62,6 @@ const Main = () => {
 
   useEffect(() => {
     const orderBtn = document.querySelector(".order-btn");
-    const totalCost = document.querySelectorAll(".totalCost");
 
     if (inputData.preference !== null && inputData.bean !== null && inputData.delivery !== null && inputData.grind !== null && inputData.quantity !== null) {
       orderBtn.classList.remove("disabled");
@@ -80,10 +79,36 @@ const Main = () => {
 
     modal.classList.remove("showModal");
     modalOverlay.style.display = "block";
+  };
 
-    //calculate shipping cost
-    if (inputData.quantity === "250g" && inputData.delivery == "Every week") {
-      totalCost.innerText = 7.2 * 4 * 7;
+  //calculate total cost
+  //take 250g = $7; 500g = $12; 1000g = $20
+  const totalCost = () => {
+    //250g
+    if (inputData.quantity === "250g" && inputData.delivery === "Every week") {
+      return Math.round(7.2 * 4 * 7).toFixed(2);
+    } else if (inputData.quantity === "250g" && inputData.delivery === "Every 2 weeks") {
+      return Math.round(9.6 * 2 * 7).toFixed(2);
+    } else if (inputData.quantity === "250g" && inputData.delivery === "Every month") {
+      return Math.round(12 * 7).toFixed(2);
+    }
+
+    //500g
+    if (inputData.quantity === "500g" && inputData.delivery === "Every week") {
+      return Math.round(7.2 * 4 * 12).toFixed(2);
+    } else if (inputData.quantity === "500g" && inputData.delivery === "Every 2 weeks") {
+      return Math.round(9.6 * 2 * 12).toFixed(2);
+    } else if (inputData.quantity === "500g" && inputData.delivery === "Every month") {
+      return Math.round(12 * 12).toFixed(2);
+    }
+
+    //1000g
+    if (inputData.quantity === "1000g" && inputData.delivery === "Every week") {
+      return Math.round(7.2 * 4 * 20).toFixed(2);
+    } else if (inputData.quantity === "1000g" && inputData.delivery === "Every 2 weeks") {
+      return Math.round(9.6 * 2 * 20).toFixed(2);
+    } else if (inputData.quantity === "1000g" && inputData.delivery === "Every month") {
+      return Math.round(12 * 20).toFixed(2);
     }
   };
 
@@ -186,12 +211,12 @@ const Main = () => {
           <p className="px-6 mb-6 paragraph md:px-[56px] md:mt-[7px] md:mb-[47px]">
             Is this correct? You can proceed to checkout or go back to plan selection if something is off. Subscription discount codes can also be redeemed at the checkout.{" "}
           </p>
-          <button type="button" className="mb-6 cta w-[85%] md:hidden" onClick={checkout}>
-            Checkout - $<span className="totalCost"></span> / mo
+          <button type="button" className="mb-6 cta w-[90%] md:hidden" onClick={checkout}>
+            Checkout - <span>${totalCost()}</span> / mo
           </button>
           <div className="hidden md:flex flex-row pb-[56px] justify-between items-center w-[100%] px-[56px]">
             <p className="font-fraunces text-[32px] leading-[36px]">
-              $<span className="totalCost"></span> / mo
+              <span>${totalCost()}</span> / mo
             </p>
             <button type="button" className="cta w-[50%]" onClick={checkout}>
               Checkout
@@ -201,7 +226,7 @@ const Main = () => {
       </div>
 
       {/* modal overlay */}
-      <div className="modal-overlay" onClick={checkout}/>
+      <div className="modal-overlay" onClick={checkout} />
     </section>
   );
 };
