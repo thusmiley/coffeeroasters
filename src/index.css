@@ -37,8 +37,11 @@
     text-decoration: none;
     transition: 0.3s ease-in-out;
   }
+  a:hover {
+    color: inherit;
+  }
 }
-.heading1, .heading2, .heading3, .heading4, .cta {
+.heading1, .heading2, .heading3, .heading4, .cta, .summary-text {
   font-family: "Fraunces", serif;
   font-weight: 900;
 }
@@ -83,6 +86,11 @@
 
 .footer-link:hover {
   @apply text-cream;
+}
+
+.summary-text {
+  font-size: 24px;
+  line-height: 40px;
 }
 
 @screen md {
@@ -204,18 +212,25 @@
 .accordion-btn[aria-expanded=true] + .collapsedelivery,
 .accordion-btn[aria-expanded=true] + .collapsequantity,
 .accordion-btn[aria-expanded=true] + .collapsegrind {
-  opacity: 1;
-  max-height: 552px;
+  max-height: 500px;
   transition: all 0.3s linear;
-  will-change: opacity, max-height;
+  will-change: max-height;
+}
+@screen xl {
+  .accordion-btn[aria-expanded=true] + .collapsepreference,
+  .accordion-btn[aria-expanded=true] + .collapsebean,
+  .accordion-btn[aria-expanded=true] + .collapsedelivery,
+  .accordion-btn[aria-expanded=true] + .collapsequantity,
+  .accordion-btn[aria-expanded=true] + .collapsegrind {
+    max-height: 400px;
+  }
 }
 
 .collapsepreference, .collapsebean, .collapsedelivery, .collapsequantity, .collapsegrind {
-  opacity: 0;
   max-height: 0;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
-  will-change: opacity, max-height;
+  will-change: max-height;
 }
 
 .option input[type=radio] {
@@ -245,8 +260,13 @@
   transform: rotate(180deg);
 }
 
+@screen md {
+  .accordion-btn::after {
+    top: 15px;
+  }
+}
 .question-mb {
-  margin-bottom: 110px;
+  margin-bottom: 80px;
 }
 
 .collapse-show {
@@ -263,13 +283,11 @@
     opacity: 1;
   }
 }
-@keyframes fadeInDown {
-  0% {
-    transform: translateY(-20px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
+.disabled {
+  pointer-events: none;
+  @apply bg-gray;
+}
+
+.sidemenu-active {
+  opacity: 1;
 }/*# sourceMappingURL=index.css.map */

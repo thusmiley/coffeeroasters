@@ -2,7 +2,6 @@ import React from "react";
 import Hero from "./components/plan/Hero";
 import Howitworks from "./components/plan/Howitworks";
 import Main from "./components/plan/Main";
-import Summary from "./components/plan/Summary";
 
 const Plan = () => {
   return (
@@ -10,7 +9,6 @@ const Plan = () => {
       <Hero />
       <Howitworks />
       <Main />
-      <Summary />
     </div>
   );
 };

@@ -2,13 +2,13 @@ import React from 'react'
 
 const Howitworks = () => {
   return (
-    <section className="bg-dark-gray rounded-[10px] xl:px-[85px] my-[120px] text-cream">
-      <div className="w-container px-cx mx-auto flexCenter flex-col relative">
-        <div className="text-center py-20 md:py-[97px] md:flex md:text-left">
+    <section className="bg-dark-gray rounded-[10px] xl:px-[85px] my-[120px] md:my-[144px] text-cream xl:my-[168px] xl:w-container xl:px-cx xl:mx-auto">
+      <div className="w-container px-cx mx-auto flexCenter flex-col relative xl:w-[100%]">
+        <div className="text-center py-20 md:py-[97px] md:flex">
           {/* orange line */}
-          <div className="hidden md:block absolute top-[110px] left-[15px] bg-orange h-[2px] w-[70%] xl:w-[76%]" />
+          <div className="hidden md:block absolute top-[110px] left-[15px] bg-orange h-[2px] w-[69.5%] xl:w-[74.2%]" />
 
-          <div className="mb-[56px] md:mb-0">
+          <div className="mb-[56px] md:mb-0 md:text-left">
             {/* circle */}
             <div className="hidden md:block rounded-full border-cyan bg-dark-gray h-[30px] w-[30px] border-[2px] mb-14" />
             <span className="text-orange text-[72px] leading-[72px] font-fraunces">01</span>
@@ -22,7 +22,7 @@ const Howitworks = () => {
             </p>
           </div>
 
-          <div className="mb-[56px] md:mb-0 md:mx-[10px] xl:mx-[95px]">
+          <div className="mb-[56px] md:mb-0 md:mx-[10px] xl:mx-[95px] md:text-left">
             {/* circle */}
             <div className="hidden md:block rounded-full border-cyan bg-dark-gray h-[30px] w-[30px] border-[2px] mb-14" />
             <span className="text-orange text-[72px] leading-[72px] font-fraunces">02</span>
@@ -35,7 +35,7 @@ const Howitworks = () => {
             </p>
           </div>
 
-          <div>
+          <div className="md:text-left">
             {/* circle */}
             <div className="hidden md:block rounded-full border-cyan bg-dark-gray h-[30px] w-[30px] border-[2px] mb-14" />
             <span className="text-orange text-[72px] leading-[72px] font-fraunces">03</span>

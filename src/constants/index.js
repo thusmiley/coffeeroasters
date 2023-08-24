@@ -73,7 +73,7 @@ export const planData = [
       },
       {
         id: "grindfilter",
-        type: "Filter",
+        type: "Filter Grind",
         desc: "For pour over or drip methods like Aeropress, Chemex, and V60",
       },
       {
