@@ -17,8 +17,8 @@ Coffeeroasters website
 
 ### Links
 
-- Git URL: https://github.com/thusmiley/dine.git
-- Live Site URL: https://dine-sooty.vercel.app/
+- Git URL: https://github.com/thusmiley/coffeeroasters.git
+- Live Site URL: https://coffeeroasters-alpha.vercel.app/
 
 ### Built with
 
