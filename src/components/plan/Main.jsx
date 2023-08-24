@@ -13,9 +13,9 @@ const Main = () => {
     const question = parent.parentElement;
 
     question.classList.toggle("question-mb"); //add 80px margin below each question when expanded
-    btn.classList.toggle("collapsed"); //rotate the arrow
+    btn.classList.toggle("rotate"); //rotate the arrow
     option.classList.toggle(attribute); //toggle the classes collapse${plan.id}
-    option.classList.toggle("collapse-show"); //add card animation
+    option.classList.toggle("collapse-anim"); //add card animation
 
     //handle side menu active state
     const btnId = e.target.id;
