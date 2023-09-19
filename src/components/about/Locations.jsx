@@ -10,7 +10,7 @@ const Locations = () => {
       <h2 className="text-[#83888F] heading3 md:ml-0 md:w-[100%]">Our headquarters</h2>
 
       <div className="flexCenter flex-col md:flex-row md:mt-[72px] md:justify-between ">
-        <div className="flexCenter flex-col mt-[72px] md:mt-0 md:inline">
+        <div className="flexCenter flex-col mt-[72px] md:mt-0">
           <img src={uk} alt="uk" />
           <h3 className="text-[28px] leading-[36px] font-fraunces mt-12 mb-[22px] md:text-[24px] xl:text-[32px] xl:leading-[36px] xl:mt-[45px] xl:mb-6">United Kingdom</h3>
           <p className="text-[16px] leading-[26px]">
@@ -21,7 +21,7 @@ const Locations = () => {
           </p>
         </div>
 
-        <div className="flexCenter flex-col mt-20 md:mt-0 md:mx-[10px] md:inline">
+        <div className="flexCenter flex-col mt-20 md:mt-0">
           <img src={canada} alt="canada" />
           <h3 className="text-[28px] leading-[36px] font-fraunces mt-12 mb-[22px] md:text-[24px] xl:text-[32px] xl:leading-[36px] xl:mt-[45px] xl:mb-6">Canada</h3>
           <p className="text-[16px] leading-[26px]">
@@ -32,7 +32,7 @@ const Locations = () => {
           </p>
         </div>
 
-        <div className="flexCenter flex-col mt-20 md:mt-0 md:inline">
+        <div className="flexCenter flex-col mt-20 md:mt-0">
           <img src={australia} alt="australia" />
           <h3 className="text-[28px] leading-[36px] font-fraunces mt-12 mb-[22px] md:text-[24px] xl:text-[32px] xl:leading-[36px] xl:mt-[45px] xl:mb-6">Australia</h3>
           <p className="text-[16px] leading-[26px]">
