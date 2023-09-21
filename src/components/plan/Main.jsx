@@ -218,7 +218,7 @@ const Main = () => {
             <p className="font-fraunces text-[32px] leading-[36px]">
               <span>${totalCost()}</span> / mo
             </p>
-            <button type="button" className="cta w-[50%]" onClick={checkout}>
+            <button type="button" className="cta w-[40%]" onClick={checkout}>
               Checkout
             </button>
           </div>
