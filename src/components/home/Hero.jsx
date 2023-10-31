@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="w-container px-cx mx-auto px-6 pt-[104px] pb-[140px] text-cream text-center home-hero-bg rounded-[10px] mt-[90px] md:mt-[120px] md:px-[58px] md:pb-[160px] md:text-left md:ml-0 xl:mt-[113px] xl:pt-[117px] xl:pl-[85px] xl:pb-[180px]">
+    <section className="w-container px-cx mx-auto px-6 pt-[140px] pb-[170px] text-cream text-center home-hero-bg rounded-[10px] mt-[90px] md:mt-[120px] md:px-[58px] md:pb-[160px] md:text-left md:ml-0 xl:mt-[113px] xl:pt-[117px] xl:pl-[85px] xl:pb-[180px]">
       <h1 className="heading1 md:text-left">
         Great coffee
         <br className="hidden md:block" /> made simple.
