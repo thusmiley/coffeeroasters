@@ -22,12 +22,12 @@ Coffeeroasters website
 
 ### Built with
 
-- Semantic HTML5 markup
 - SASS
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
 - Tailwind
-- React
+- React (Vite)
 - Multistep form
 - HeadlessUI
+- React Hook Form
