@@ -30,3 +30,4 @@ Coffeeroasters website
 - Tailwind
 - React
 - Multistep form
+- HeadlessUI

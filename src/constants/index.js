@@ -1,3 +1,31 @@
+export const sideMenu = [
+  {
+    id: "preference",
+    num: "01",
+    name: "Preferences",
+  },
+  {
+    id: "bean",
+    num: "02",
+    name: "Bean Type",
+  },
+  {
+    id: "quantity",
+    num: "03",
+    name: "Quantity",
+  },
+  {
+    id: "grind",
+    num: "04",
+    name: "Grind Option",
+  },
+  {
+    id: "delivery",
+    num: "05",
+    name: "Deliveries",
+  },
+];
+
 export const planData = [
   {
     id: "preference",

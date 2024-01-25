@@ -1,25 +1,38 @@
-import React from 'react'
+import React from "react";
 import logo from "../../src/assets/shared/desktop/logo-white.svg";
 
 const Footer = () => {
+  const pathname = window.location.pathname;
+
   return (
-    <footer>
-      <div className="bg-dark-gray w-container px-cx mx-auto p-[54px] flexCenter flex-col mb-[72px] xl:flex-row xl:justify-between xl:p-[50px]">
+    <footer className="px-6 mx-auto md:px-10 xl:px-20 max-w-[1280px]">
+      <div className="bg-dark-gray p-[54px] flexCenter flex-col mb-[72px] xl:flex-row xl:justify-between xl:p-[50px]">
         <img src={logo} alt="logo" className="w-[163px] md:w-[236px]" />
 
-        <div className="text-center flexCenter flex-col my-12 md:flex-row md:mt-8 md:mb-[65px] xl:m-0 xl:ml-[-150px]">
-          <a href="/" className="footer-link text-gray">
+        <div className="text-center flexCenter flex-col my-12 space-y-6 md:space-y-0 md:space-x-8 text-gray md:flex-row md:mt-8 md:mb-[65px] xl:m-0 xl:ml-[-150px]">
+          <a
+            href="/"
+            className={`${pathname == "/" ? "text-cream" : ""} footer-link`}
+          >
             HOME
           </a>
-          <a href="/about" className="footer-link text-gray my-6 md:my-0 md:mx-8">
+          <a
+            href="/about"
+            className={`${
+              pathname == "/about" ? "text-cream" : ""
+            } footer-link`}
+          >
             ABOUT US
           </a>
-          <a href="/plan" className="footer-link text-gray">
+          <a
+            href="/plan"
+            className={`${pathname == "/plan" ? "text-cream" : ""} footer-link`}
+          >
             CREATE YOUR PLAN
           </a>
         </div>
 
-        <div className="social flexCenter">
+        <div className="social flexCenter space-x-6">
           <a href="/">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
               <path
@@ -28,7 +41,7 @@ const Footer = () => {
               />
             </svg>
           </a>
-          <a href="/" className="mx-6">
+          <a href="/">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20">
               <path
                 fill="#FEFCF7"
@@ -48,6 +61,6 @@ const Footer = () => {
       </div>
     </footer>
   );
-}
+};
 
-export default Footer
+export default Footer;
