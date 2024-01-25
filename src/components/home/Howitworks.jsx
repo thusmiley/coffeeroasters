@@ -64,8 +64,8 @@ const Howitworks = () => {
           </div>
         </div>
 
-        <button className="text-left w-full mt-[60px]">
-          <a href="/plan" className="cta text-center md:w-[250px] md:ml-0">
+        <button className="text-center w-full md:mt-[60px] md:text-left md:float-left">
+          <a href="/plan" className="cta text-center md:float-left md:text-left md:w-[250px] md:ml-0">
             Create your plan
           </a>
         </button>
